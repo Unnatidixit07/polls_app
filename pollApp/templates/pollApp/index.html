@@ -17,6 +17,7 @@
         {% else %}
         <p>No polls are available.</p>
         {% endif %}
+        <a href="{% url 'poll_app:insert' %}">If you want to add new question click here</a>
     </div>
     </body>
 </html>
