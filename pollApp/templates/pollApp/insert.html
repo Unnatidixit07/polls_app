@@ -1,0 +1,20 @@
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <form action="{% url 'poll_app:insert' %}" method="POST">
+            {% csrf_token %}
+           <p>Question:</p> <input type="text" name="_question" required>
+           <br/>
+           <p>Choice 1:</p> <input type="text" name="choice_one" required>
+           <p>Choice 2:</p> <input type="text" name="choice_two" required>
+           <p>Choice 3:</p> <input type="text" name="choice_three">
+           <p>Choice 4:</p> <input type="text" name="choice_four">
+           <p>Choice 5:</p> <input type="text" name="choice_five">
+           <br/>
+           <input type="submit"></input>
+           <a href="{% url 'poll_app:index' %}">Go to home page</a>
+        </form>
+    </body>
+</html>
